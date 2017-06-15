@@ -136,3 +136,5 @@ form:
   pagerduty:
     parameters:
       manifest-pager-duty: 'https://bluemix.pagerduty.com/escalation_policies#ABCDEF'
+    schema:
+      $ref: pagerduty.json

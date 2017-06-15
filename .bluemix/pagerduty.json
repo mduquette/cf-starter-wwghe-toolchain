@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "manifest-pager-duty": {
+            "description": {
+                "$ref": "#/messages/sc.manifestPagerDuty"
+            },
+            "type": "string"
+        }
+    },
+    "required": [
+        "manifest-pager-duty"
+    ],
+    "form": [
+        {
+            "type": "validator",
+            "url": "/devops/setup/bm-helper/helper.html"
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": "PagerDuty Escalation Policy URL",
+            "key": "manifest-pager-duty"
+        }
+    ]
+}
