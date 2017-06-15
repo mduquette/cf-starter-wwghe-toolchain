@@ -13,13 +13,20 @@
         }
     },
     "required": [
+        "api-key",
         "manifest-pager-duty"
     ],
     "form": [
         {
             "type": "text",
             "readonly": false,
-            "title": "PagerDuty Escalation Policy URL",
+            "title": "API access key",
+            "key": "api-key"
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": "PagerDuty escalation policy URL",
             "key": "manifest-pager-duty"
         }
     ]
