@@ -133,8 +133,3 @@ form:
       manifest-bailey-project: '{{toolchain.name}}'    
     schema:
       $ref: manifest.json
-  pagerduty:
-    parameters:
-      manifest-pager-duty: '{{toolchain.name}}'    
-    schema:
-      $ref: pagerduty.json
