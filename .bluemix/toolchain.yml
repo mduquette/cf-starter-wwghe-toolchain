@@ -72,7 +72,7 @@ services:
           RUNTIME_REPO_KEY: '{{form.customtool.parameters.manifest-repo-key}}'
           MANIFEST_SERVICE: '{{form.customtool.parameters.manifest-service-name}}'
           MANIFEST_COMPONENT: '{{form.pipeline.parameters.prod-app-name}}'
-          MANIFEST_PD: '{{form.pagerduty.parameters.manifest-pager-duty}}'
+          MANIFEST_PD: REPLACE ME
           MANIFEST_REPO: '{{services.sample-repo.parameters.repo_url}}'
           MANIFEST_BAILEY_URL: '{{form.customtool.parameters.manifest-bailey-url}}'
           MANIFEST_BAILEY_PROJ: '{{form.customtool.parameters.manifest-bailey-project}}'
@@ -133,8 +133,3 @@ form:
       manifest-bailey-project: '{{toolchain.name}}'    
     schema:
       $ref: manifest.json
-  pagerduty:
-    parameters:
-      manifest-pager-duty: 'https://bluemix.pagerduty.com/escalation_policies#ABCDEF'
-    schema:
-      $ref: pagerduty.json
