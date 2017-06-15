@@ -23,8 +23,6 @@ toolchain:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
 services:
-  pagerduty:
-    service_id: pagerduty
   sample-repo:
     service_id: github_integrated
     parameters:
@@ -79,6 +77,8 @@ services:
           MANIFEST_CUSTOMER_URL: '{{form.customtool.parameters.manifest-customer-tickets}}'
           MANIFEST_EMAIL: '{{form.customtool.parameters.manifest-email}}'
         execute: true
+  pagerduty:
+    service_id: pagerduty
   webide:
     service_id: orion
   messaging:
