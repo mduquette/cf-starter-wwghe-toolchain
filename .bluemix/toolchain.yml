@@ -133,5 +133,6 @@ form:
     schema:
       $ref: manifest.json
   pagerduty:
+    paramters:
     schema:
       $ref: pagerduty.json
