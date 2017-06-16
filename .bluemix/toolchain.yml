@@ -77,8 +77,9 @@ services:
           MANIFEST_EMAIL: '{{form.customtool.parameters.manifest-email}}'
           MANIFEST_PD: '{{form.pagerduty.parameters.escalation-policy}}'
         execute: false
-  pagerduty:
+  alerting: 
     service_id: pagerduty
+    $ref: pagerduty.yml
   webide:
     service_id: orion
   messaging:
@@ -133,19 +134,3 @@ form:
       manifest-bailey-project: '{{toolchain.name}}'    
     schema:
       $ref: manifest.json
-  pagerduty:
-    parameters:
-      escalation-policy: ""
-    schema:
-      $ref: pagerduty.json
-  incidents:
-    parameters:
-      type: Incident Management
-      name: Incident Management
-      lifecyclePhase: "MANAGE"
-      imageUrl: https://www.ibm.com/design/assets/language/resources/icon-library/icons/svg/object-based/bee_64.svg
-      documentationUrl: https://pages.github.ibm.com/CloudEngineering/service_contract/
-      incident-name: ""
-      incident-url: ""
-    schema:
-      $ref: incidents.json
