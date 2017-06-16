@@ -138,3 +138,12 @@ form:
       escalation-policy: ""
     schema:
       $ref: pagerduty.json
+  customtool:
+    parameters:
+      type: IncidentManagement
+      name: Incident Management
+      lifecyclePhase: "MANAGE"
+      imageUrl: https://www.ibm.com/design/assets/language/resources/icon-library/icons/svg/object-based/bee_64.svg
+      documentationUrl: https://pages.github.ibm.com/CloudEngineering/service_contract/    
+    schema:
+      $ref: incidents.json
