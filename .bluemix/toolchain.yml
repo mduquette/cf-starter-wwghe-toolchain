@@ -138,7 +138,7 @@ form:
       escalation-policy: ""
     schema:
       $ref: pagerduty.json
-  customtool:
+  incidents:
     parameters:
       type: IncidentManagement
       name: Incident Management
