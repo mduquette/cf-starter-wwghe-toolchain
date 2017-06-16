@@ -24,7 +24,7 @@
     },
     "escalation-policy": {
         "title": "PagerDuty service escalation policy",
-        "description": "Type the name of the PagerDuty esclation policy used by the service to escalate incidents.",
+        "description": "Type the URL to the PagerDuty esclation policy used by the service to escalate incidents.",
         "type": "string"
     }
 },
