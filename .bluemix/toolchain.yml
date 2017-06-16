@@ -135,5 +135,6 @@ form:
       $ref: manifest.json
   pagerduty:
     parameters:
+      escalation-policy: ""
     schema:
       $ref: pagerduty.json
