@@ -140,10 +140,12 @@ form:
       $ref: pagerduty.json
   incidents:
     parameters:
-      type: IncidentManagement
+      type: Incident Management
       name: Incident Management
       lifecyclePhase: "MANAGE"
       imageUrl: https://www.ibm.com/design/assets/language/resources/icon-library/icons/svg/object-based/bee_64.svg
-      documentationUrl: https://pages.github.ibm.com/CloudEngineering/service_contract/    
+      documentationUrl: https://pages.github.ibm.com/CloudEngineering/service_contract/
+      incident-name: ""
+      incident-url: ""
     schema:
       $ref: incidents.json
