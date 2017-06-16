@@ -135,10 +135,5 @@ form:
       $ref: manifest.json
   pagerduty:
     parameters:
-      api_key: foo
-      service_name: foo
-      user_email: foo
-      user_phone: foo
-      escalaton-policy: foo
     schema:
       $ref: pagerduty.json
