@@ -1,33 +1,32 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "messages": {
-        "$i18n": "locales.yml"
+"$schema": "http://json-schema.org/draft-04/schema#",
+"properties": {
+    "api_key": {
+        "title": "API access key",
+        "description": "Type your API access key. You can find or create this key on the Configuration/API Access section of the PagerDuty website. [PagerDuty Support article on how to get API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key).",
+        "type": "string"
     },
-    "type": "object",
-    "properties": {
-        "manifest-pager-duty": {
-            "description": {
-                "$ref": "#/messages/sc.manifestPagerDuty"
-            },
-            "type": "string"
-        }
+    "service_name": {
+        "title": "PagerDuty service name",
+        "description": "Type the name of the PagerDuty service to post alerts to. If you want alerts to be posted to a new service, type a new name. PagerDuty will create the service.",
+        "type": "string"
     },
-    "required": [
-        "api-key",
-        "manifest-pager-duty"
-    ],
-    "form": [
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "API access key",
-            "key": "api-key"
-        },
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "PagerDuty escalation policy URL",
-            "key": "manifest-pager-duty"
-        }
-    ]
+    "user_email": {
+        "title": "Primary contact email",
+        "description": "Type the email address of the user to contact when an alert is posted. If you want alerts to be sent to a new email address, type the address and PagerDuty will create a user.",
+        "type": "string"
+    },
+    "user_phone": {
+        "title": "Primary contact phone number",
+        "description": "Type the phone number of the user to contact when an alert is posted. Include the national code followed by a space and a 10-digit number; for example: +1 1234567890. If you omit the national code, it is set to +1 by default.",
+        "type": "string"
+    },
+    "escalation-policy": {
+        "title": "Primary contact phone number",
+        "description": "Type the phone number of the user to contact when an alert is posted. Include the national code followed by a space and a 10-digit number; for example: +1 1234567890. If you omit the national code, it is set to +1 by default.",
+        "type": "string"
+    }
+},
+"required": ["api_key", "service_name"],
+"form": ["api_key", "service_name", "user_email", "user_phone", "escalaton-policy"]
 }

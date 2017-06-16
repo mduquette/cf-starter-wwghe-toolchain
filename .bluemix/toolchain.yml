@@ -70,12 +70,12 @@ services:
           RUNTIME_REPO_KEY: '{{form.customtool.parameters.manifest-repo-key}}'
           MANIFEST_SERVICE: '{{form.customtool.parameters.manifest-service-name}}'
           MANIFEST_COMPONENT: '{{form.pipeline.parameters.prod-app-name}}'
-          MANIFEST_PD: '{{form.customtool.parameters.manifest-pager-duty}}'
           MANIFEST_BAILEY_URL: '{{form.customtool.parameters.manifest-bailey-url}}'
           MANIFEST_BAILEY_PROJ: '{{form.customtool.parameters.manifest-bailey-project}}'
           MANIFEST_CUSTOMER_URL: '{{form.customtool.parameters.manifest-customer-tickets}}'
           MANIFEST_EMAIL: '{{form.customtool.parameters.manifest-email}}'
-        execute: true
+          MANIFEST_PD: '{{form.pagerduty.parameters.escalation-policy}}'
+        execute: false
   pagerduty:
     service_id: pagerduty
   webide:
@@ -133,7 +133,5 @@ form:
     schema:
       $ref: manifest.json
   pagerduty:
-    parameters:
-      manifest-pager-duty: '{{toolchain.name}}'    
     schema:
       $ref: pagerduty.json
