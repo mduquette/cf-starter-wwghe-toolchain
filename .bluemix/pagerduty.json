@@ -22,8 +22,8 @@
         "type": "string"
     },
     "escalation-policy": {
-        "title": "Primary contact phone number",
-        "description": "Type the phone number of the user to contact when an alert is posted. Include the national code followed by a space and a 10-digit number; for example: +1 1234567890. If you omit the national code, it is set to +1 by default.",
+        "title": "PagerDuty service escalation policy",
+        "description": "Type the name of the PagerDuty esclation policy used by the service to escalate incidents.",
         "type": "string"
     }
 },
