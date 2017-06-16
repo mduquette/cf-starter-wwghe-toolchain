@@ -12,6 +12,7 @@ template:
     - sample-build
     - sample-repo
     - manifest-clone
+    - pagerduty
   info:
     git url: >-
       [https://github.com/open-toolchain/cf-starter-wwghe-toolchain](https://github.com/open-toolchain/cf-starter-wwghe-toolchain)
@@ -133,6 +134,11 @@ form:
     schema:
       $ref: manifest.json
   pagerduty:
-    paramters:
+    parameters:
+      api_key: foo
+      service_name: foo
+      user_email: foo
+      user_phone: foo
+      escalaton-policy: foo
     schema:
       $ref: pagerduty.json
