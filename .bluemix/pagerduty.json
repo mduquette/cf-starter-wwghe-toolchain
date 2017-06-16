@@ -29,5 +29,5 @@
     }
 },
 "required": ["api_key", "service_name"],
-"form": ["api_key", "service_name", "user_email", "user_phone", "escalaton-policy"]
+"form": ["api_key", "service_name", "user_email", "user_phone", "escalation-policy"]
 }
