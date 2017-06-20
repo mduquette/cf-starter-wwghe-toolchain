@@ -55,11 +55,8 @@ stages:
         git subtree pull --prefix=manifest manifest-runtime-production master -m "Pull manifest-runtime-production updates" --squash
       fi
 
-      # check for changes and push if needed
-      if [ "$(git diff --exit-code)" ]; 
-      then
-        git push origin ${RUNTIME_BRANCH}
-      fi
+      # Push any changes
+      git push origin ${RUNTIME_BRANCH}
 - name: Create base manifest
   inputs:
   - type: git
