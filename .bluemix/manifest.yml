@@ -15,7 +15,7 @@ stages:
     type: text
   - name: REPO_KEY
     value: ${RUNTIME_REPO_KEY}
-    type: text
+    type: secure
   - name: RUNTIME_REPO
     value: ${RUNTIME_REPO}
     type: text
