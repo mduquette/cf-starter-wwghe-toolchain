@@ -175,8 +175,11 @@ stages:
       mv out_${manifest_template} ${manifest_template}
 
       # check for changes and push if needed
-      if [ "$(git diff --exit-code)" ]; 
+      if [ "$(git status --porcelain | grep ${manifest_template})" ]; 
       then
+        # nothing to push
+        exit 0
+      else
         git add ./${manifest_template}
         git commit -m "Adding Service Manifest file"
         git push origin ${RUNTIME_BRANCH}
@@ -234,8 +237,8 @@ stages:
 
       set -x
 
-      git config user.email "${GIT_USER}@ibm.com"
-      git config user.name "${GIT_USER}"
+      git config user.email "${MANIFEST_EMAIL}"
+      git config user.name "Added by CD Pipeline"
       git add ${rootdir}/libibmmanifest.tar.gz
       git add ${rootdir}/.profile
       git commit -m "Adding manifest runtime libraries"
