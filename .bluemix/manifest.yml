@@ -174,7 +174,7 @@ stages:
       mv out_${manifest_template} ${manifest_template}
 
       # check for changes and push if needed
-      if [ "$(git status --porcelain | grep ${manifest_template})" ]; 
+      if [ "$(git status --porcelain | grep manifest)" ]; 
       then
         git add ./${manifest_template}
         git commit -m "Adding Service Manifest file"
