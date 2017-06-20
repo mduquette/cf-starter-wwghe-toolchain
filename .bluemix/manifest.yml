@@ -45,14 +45,13 @@ stages:
       # git subtree add triggers a background commit if there are changes available
       # check to see if the subtree "manifest" exists.  If not, then add it. If it exists, just pull
       # new sources
-
-      if [ "$(git log | grep git-subtree-dir | awk '{print $2 }' | grep -c manifest)" ]
+      if [ "$(git log | grep git-subtree-dir | grep manifest)" ]
       then
-        echo "Manifest subtree missing - adding subtree"
-        git subtree add --prefix=manifest manifest-runtime-production master -m "Add manifest-runtime-production content" --squash
-      else
         echo "Subtree exists - pulling changes."
         git subtree pull --prefix=manifest manifest-runtime-production master -m "Pull manifest-runtime-production updates" --squash
+      else
+        echo "Manifest subtree missing - adding subtree"
+        git subtree add --prefix=manifest manifest-runtime-production master -m "Add manifest-runtime-production content" --squash
       fi
 
       # Push any changes
