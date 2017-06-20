@@ -176,12 +176,12 @@ stages:
       # check for changes and push if needed
       if [ "$(git status --porcelain | grep ${manifest_template})" ]; 
       then
-        # nothing to push
-        exit 0
-      else
         git add ./${manifest_template}
         git commit -m "Adding Service Manifest file"
         git push origin ${RUNTIME_BRANCH}
+      else
+        # nothing to push
+        exit 0
       fi
   - name: Register Manifest
     type: deployer
