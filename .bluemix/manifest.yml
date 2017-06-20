@@ -39,6 +39,9 @@ stages:
       git_repo="${RUNTIME_REPO/\/\//\/\/${REPO_KEY}@}"
       git remote add manifest-runtime-production ${git_repo}
 
+      # make branch available to all stages
+      export RUNTIME_BRANCH=${RUNTIME_BRANCH}
+      
       # we want to check into a dedicated branch
       git checkout -b ${RUNTIME_BRANCH}
 
@@ -65,9 +68,6 @@ stages:
   triggers:
   - type: stage
   properties:
-  - name: RUNTIME_BRANCH
-    value: add-sc-runtime
-    type: text
   - name: MANIFEST_SERVICE
     value: ${MANIFEST_SERVICE}
     type: text
