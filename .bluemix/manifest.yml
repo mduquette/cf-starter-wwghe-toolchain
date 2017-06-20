@@ -68,9 +68,6 @@ stages:
   - name: RUNTIME_BRANCH
     value: add-sc-runtime
     type: text
-  - name: GIT_USER
-    value: ${GIT_USER}
-    type: text
   - name: MANIFEST_SERVICE
     value: ${MANIFEST_SERVICE}
     type: text
