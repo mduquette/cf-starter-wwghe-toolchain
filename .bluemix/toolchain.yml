@@ -66,14 +66,14 @@ services:
         env:
           SAMPLE_REPO: sample-repo
           RUNTIME_REPO: https://github.ibm.com/CloudTools/manifest-runtime-production
-          RUNTIME_REPO_KEY: '{{form.customtool.parameters.manifest-repo-key}}'
-          MANIFEST_SERVICE: '{{form.customtool.parameters.manifest-service-name}}'
+          RUNTIME_REPO_KEY: '{{form.customtool_manifest-clone.parameters.manifest-repo-key}}'
+          MANIFEST_SERVICE: '{{form.customtool_manifest-clone.parameters.manifest-service-name}}'
           MANIFEST_COMPONENT: '{{form.pipeline.parameters.prod-app-name}}'
-          MANIFEST_PD: '{{form.customtool.parameters.manifest-pager-duty}}'
-          MANIFEST_BAILEY_URL: '{{form.customtool.parameters.manifest-bailey-url}}'
-          MANIFEST_BAILEY_PROJ: '{{form.customtool.parameters.manifest-bailey-project}}'
-          MANIFEST_CUSTOMER_URL: '{{form.customtool.parameters.manifest-customer-tickets}}'
-          MANIFEST_EMAIL: '{{form.customtool.parameters.manifest-email}}'
+          MANIFEST_PD: '{{form.customtool_manifest-clone.parameters.manifest-pager-duty}}'
+          MANIFEST_BAILEY_URL: '{{form.customtool_manifest-clone.parameters.manifest-bailey-url}}'
+          MANIFEST_BAILEY_PROJ: '{{form.customtool_manifest-clone.parameters.manifest-bailey-project}}'
+          MANIFEST_CUSTOMER_URL: '{{form.customtool_manifest-clone.parameters.manifest-customer-tickets}}'
+          MANIFEST_EMAIL: '{{form.customtool_manifest-clone.parameters.manifest-email}}'
         execute: true
   webide:
     service_id: orion
