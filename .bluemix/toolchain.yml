@@ -117,11 +117,10 @@ form:
       prod-app-name: '{{services.sample-repo.parameters.repo_name}}'
     schema:
       $ref: deploy.json
-  customtool:
+  customtool_manifest-clone:
     parameters:
       type: Manifest Runtime Libraries
       name: Manifest Runtime Libraries
-      lifecyclePhase: "DELIVER"
       imageUrl: https://www.ibm.com/design/assets/language/resources/icon-library/icons/svg/object-based/bee_64.svg
       documentationUrl: https://pages.github.ibm.com/CloudEngineering/service_contract/
       manifest-service-name: '{{toolchain.name}}'
